@@ -12,6 +12,10 @@ define(function(require) {
         this.graphic.addTileName('up', 2);
         this.graphic.addTileName('left', 4);
         this.graphic.addTileName('right', 6);
+        this.graphic.addTileName('standing_down', 8);
+        this.graphic.addTileName('standing_up', 9);
+        this.graphic.addTileName('standing_left', 4);
+        this.graphic.addTileName('standing_right', 6);
 
         this.graphic.addAnimationName('walk_down', [1, 10, 0, 10]);
         this.graphic.addAnimationName('walk_up', [3, 10, 2, 10]);
@@ -56,7 +60,7 @@ define(function(require) {
             }
         }
 
-        var tile = (this.walking ? 'walk_' : '') + this.direction;
+        var tile = (this.walking ? 'walk_' : 'standing_') + this.direction;
         this.graphic.currentTile = tile;
     };
 
