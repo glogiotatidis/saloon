@@ -7,13 +7,16 @@ define(function(require) {
     var loader = require('game/loader');
     var Player = require('game/player');
     var SaloonWorld = require('game/world');
+    var Door = require('game/door');
 
     // REGISTER RESOURCES TO LOAD HERE
     loader.register('tiles_player', 'img/player.png', 'image');
     loader.register('tiles_bar', 'img/tiles.png', 'image');
     loader.register('map_bar', 'maps/bar.tmx', 'map');
+    loader.register('map_bar1', 'maps/bar1.tmx', 'map');
 
-    // Callback run once all resources have been loaded.
+
+    // callback run once all resources have been loaded.
     loader.loadAll().done(function() {
         // Initialize engine.
         var engine = new Engine(256, 224, 3, new SaloonWorld());
@@ -22,15 +25,7 @@ define(function(require) {
         // ADD INITIAL STATE (entities, worlds, etc) HERE
         engine.addEntity(new Player(5 * 16, 6 * 16));
 
-        // Create map.
-        var map = loader.get('map_bar');
-        var tilemap = new Tilemap(map.layers['tiles'].grid, 0, 0);
-
-        // Create tuled graphic for rendering tilemap.
-        tilemap.graphic = new TiledGraphic(loader.get('tiles_bar'),
-                                           16, 16, 0, 0);
-        engine.world.tilemap = tilemap;
-
+        engine.world.enable_map('map_bar');
         // Append canvas to screen and start the engine!
         document.querySelector('#game').appendChild(engine.canvas);
         engine.start();

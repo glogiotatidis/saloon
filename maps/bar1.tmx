@@ -13,7 +13,7 @@
 0,0,3,1,1,1,1,1,1,1,1,1,1,4,0,0,
 0,0,3,1,1,1,1,1,1,1,1,1,1,4,0,0,
 0,0,3,1,1,1,1,1,1,1,1,1,1,4,0,0,
-0,0,3,1,1,10,1,1,1,1,1,1,1,4,0,0,
+0,0,3,1,1,1,1,1,1,1,1,1,1,4,0,0,
 0,0,3,1,1,1,1,1,1,1,1,1,1,4,0,0,
 0,0,3,1,1,1,1,1,1,1,1,1,1,4,0,0,
 0,0,3,1,1,1,1,1,1,1,1,1,1,4,0,0,
@@ -21,14 +21,5 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="doors" width="16" height="14">
-  <object name="door1" x="80" y="128" width="16" height="16">
-   <properties>
-    <property name="map_file" value="maps/bar1.tmx"/>
-    <property name="map_name" value="map_bar1"/>
-    <property name="player1_x" value="128"/>
-    <property name="player1_y" value="128"/>
-   </properties>
-  </object>
- </objectgroup>
+ <objectgroup name="doors" width="16" height="14"/>
 </map>

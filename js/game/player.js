@@ -20,7 +20,8 @@ define(function(require) {
 
         this.direction = 'down';
         this.walking = false;
-
+        this.type = 'player1';
+        this.setHitbox(0, 0, 16,16 );
     }
     Player.prototype = Object.create(Entity.prototype);
 
